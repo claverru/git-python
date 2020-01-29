@@ -2,6 +2,7 @@
 
 !git config --global http.sslverify false
 
+# ------------------------------------------------------------------------------
 import os
 import sys
 import shutil
@@ -10,13 +11,11 @@ from getpass import getpass
 import git
 
 # ------------------------------------------------------------------------------
-# Define project's name and owner and git provider
-# ------------------------------------------------------------------------------
 OWNER = 'claverru'
 P_NAME = 'git-python'
 GIT_PROV = 'github.com'
-# ------------------------------------------------------------------------------
 
+# ------------------------------------------------------------------------------
 user = input('Git user:      ')
 passw = getpass('Git password:  ')
 
@@ -38,3 +37,9 @@ except git.GitCommandError:
   print('Access Denied, check authentication.')
 
 del user, passw
+
+# ------------------------------------------------------------------------------
+import functions
+
+# ------------------------------------------------------------------------------
+functions.add(3, 2)
